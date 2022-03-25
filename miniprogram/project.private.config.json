@@ -1,0 +1,53 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "查看问卷",
+          "pathName": "pages/add/add",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/more/more",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "意见反馈",
+          "pathName": "pages/opinion/opinion",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "创建问卷",
+          "pathName": "pages/add/add",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "问卷调查模板",
+          "pathName": "components/quesModule/quesModule",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}

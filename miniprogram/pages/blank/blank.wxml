@@ -1,0 +1,31 @@
+<view>
+    <h3>标题</h3>
+    <view hover-class="none" class="content-header">
+        <input bindblur="getHeader" class="header-input" placeholder="问卷题目" />
+    </view>
+</view>
+<view>
+    <h3>问题1(单选)</h3>
+    <view hover-class="none" class="content-header">
+        <input bindblur="getMiddle" class="middle-input" placeholder="问题题目" />
+        <input data-qid="A" bindblur="getMiddle" class="middle-input" placeholder="答案1" />
+        <input data-qid="B" bindblur="getMiddle" class="middle-input" placeholder="答案2" />
+        <input data-qid="C" bindblur="getMiddle" class="middle-input" placeholder="答案3" />
+    </view>
+</view>
+<view>
+    <h3>问题2(多选)</h3>
+    <view hover-class="none" class="content-header">
+        <input bindblur="getMiddleT" class="middle-input" placeholder="问题题目" />
+        <input data-qid="A" bindblur="getMiddleT" class="middle-input" placeholder="答案1" />
+        <input data-qid="B" bindblur="getMiddleT" class="middle-input" placeholder="答案2" />
+        <input data-qid="C" bindblur="getMiddleT" class="middle-input" placeholder="答案3" />
+    </view>
+</view>
+<view>
+    <h3>填空题</h3>
+    <view hover-class="none" class="content-header">
+        <input bindblur="getButtom" class="middle-input" placeholder="问题题目" />
+    </view>
+</view>
+<button style="margin-top:40rpx" bindtap="submitQuestions" type="primary">创建问卷</button>

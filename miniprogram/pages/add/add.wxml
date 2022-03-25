@@ -1,0 +1,9 @@
+<view class="content-box">
+    <view class="content" wx:for="{{addQuestions}}" wx:key="id">
+        <navigator hover-class="none" url="{{item.url}}">
+            <image mode="widthFix" src="{{item.src}}" />
+            <text>{{item.name}}</text>
+        </navigator>
+
+    </view>
+</view>

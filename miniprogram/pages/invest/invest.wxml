@@ -1,0 +1,14 @@
+<view>
+    <h3>调研</h3>
+    <view>
+        <view hover-class="none" bindtap="handleUrl" data-qid="{{index}}" class="invest-content" wx:for="{{nameList}}" wx:key="index">
+            <view class="left">
+                <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bvg1Mt.png" />
+                <text>{{item}}</text>
+            </view>
+            <view class="right">
+                <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bvqAEj.png" />
+            </view>
+        </view>
+    </view>
+</view>

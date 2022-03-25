@@ -1,0 +1,11 @@
+<view class="all">
+    <view class="content" data-qid="{{index}}" class="content" wx:for="{{nameList}}" wx:key="index">
+        <view class="content-box" bindtap="handleUrl">
+            <image mode="widthFix" src="https://s1.ax1x.com/2022/03/24/qG8klR.png" />
+        </view>
+        <view class="content-ashin" data-id="{{index}}" bindtap="handleDelete">
+            <image mode="widthFix" src="https://s1.ax1x.com/2022/03/25/qtpL24.png" />
+        </view>
+        <text>{{item}}</text>
+    </view>
+</view>

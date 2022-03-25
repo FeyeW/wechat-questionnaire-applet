@@ -1,0 +1,30 @@
+page {
+  background-color: #f3f5f9;
+}
+view {
+  margin-top: 10rpx;
+}
+view h3 {
+  color: #a9a9a9;
+  font-size: 24rpx;
+  margin-left: 40rpx;
+}
+view .content-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 15rpx 40rpx;
+}
+view .content-header .header-input {
+  margin: 10rpx;
+  width: 96%;
+  height: 55rpx;
+  border: 1px solid #3bddfa;
+}
+view .content-header .middle-input {
+  margin: 10rpx;
+  width: 96%;
+  height: 55rpx;
+  border: 1px solid #3bddfa;
+}

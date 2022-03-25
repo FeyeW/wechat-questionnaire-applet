@@ -1,0 +1,41 @@
+page {
+    background-color: #f3f5f9;
+}
+
+.all {
+    display    : flex;
+    align-items: center;
+    flex-wrap  : wrap;
+
+    .content {
+        position   : relative;
+        text-align : center;
+        width      : 230rpx;
+        margin-left: 10rpx;
+
+        .content-box {
+            width           : 230rpx;
+            height          : 190rpx;
+            background-color: #fff;
+            display         : flex;
+            align-items     : center;
+            margin          : 10rpx;
+            flex-wrap       : wrap;
+
+            image {
+                width      : 202rpx;
+                margin-left: 15rpx;
+            }
+        }
+
+        .content-ashin {
+            position: absolute;
+            bottom  : -10rpx;
+            right   : 10rpx;
+
+            image {
+                width: 40rpx;
+            }
+        }
+    }
+}

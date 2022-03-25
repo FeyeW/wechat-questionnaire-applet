@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="page-name">{{name}}</view>
+    <block wx:for="{{questions}}" wx:key="id">
+        <view class="question-wrap">
+            <view class="question-title">{{item.title}}</view>
+            <view class="question-con" wx:if="{{item.question_type=='input'}}">
+                <input data-qid="{{item.id}}" data-qtype="{{item.question_type}}" bindinput="onTextInput" type="{{item.input_type}}" placeholder="请填写" class="input-text" />
+            </view>
+            <view class="question-con" wx:elif="{{item.question_type=='radio'}}">
+                <radio-group data-qid="{{item.id}}" data-qtype="{{item.question_type}}" bindchange="onRadioChange">
+                    <label class="label-row" wx:for="{{item.options1}}" wx:key="id" wx:for-item="opt">
+                        <radio value="{{opt.id}}" />
+                        {{opt.value}}
+                    </label>
+                </radio-group>
+            </view>
+            <view class="question-con" wx:else>
+                <checkbox-group data-qid="{{item.id}}" data-qtype="{{item.question_type}}" bindchange="onCheckBoxChange">
+                    <label class="label-row" wx:for="{{item.options2}}" wx:key="id" wx:for-item="opt">
+                        <checkbox value="{{opt.id}}" />
+                        {{opt.value}}
+                    </label>
+                </checkbox-group>
+            </view>
+        </view>
+    </block>
+    <view class="btn-row">
+        <button bindtap="submitAnswer" type="primary">提交答案</button>
+    </view>
+</view>

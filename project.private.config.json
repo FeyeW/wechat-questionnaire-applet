@@ -1,0 +1,53 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "模板",
+          "pathName": "pages/quesModule/quesModule",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "调研",
+          "pathName": "pages/invest/invest",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "投票问卷",
+          "pathName": "pages/vote/vote",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "空白问卷",
+          "pathName": "pages/blank/blank",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}

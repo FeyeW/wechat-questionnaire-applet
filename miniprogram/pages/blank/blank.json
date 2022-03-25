@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "quesModule": "../../components/quesModule/quesModule"
+  },
+  "navigationBarTitleText": "空白问卷"
+}

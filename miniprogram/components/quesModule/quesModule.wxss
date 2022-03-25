@@ -1,0 +1,37 @@
+page {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 20rpx;
+}
+.container .page-name {
+  font-size: 36rpx;
+  line-height: 2;
+  text-align: center;
+}
+.container .question-wrap {
+  margin: 20rpx 0;
+}
+.container .question-wrap .question-title {
+  font-size: 28rpx;
+  margin: 20rpx 0 10rpx;
+}
+.container .question-wrap .question-con {
+  margin-left: 20rpx;
+}
+.container .question-wrap .question-con .label-row {
+  display: block;
+  margin: 10rpx 0;
+}
+.container .question-wrap .question-con .input-text {
+  box-sizing: border-box;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid #d1d1d1;
+  border-radius: 6rpx;
+  padding: 0 6rpx;
+}
+.container .btn-row {
+  margin: 80rpx 0;
+}

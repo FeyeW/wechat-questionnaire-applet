@@ -1,0 +1,35 @@
+page {
+  background-color: #f3f5f9;
+}
+.all {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.all .content {
+  position: relative;
+  text-align: center;
+  width: 230rpx;
+  margin-left: 10rpx;
+}
+.all .content .content-box {
+  width: 230rpx;
+  height: 190rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 10rpx;
+  flex-wrap: wrap;
+}
+.all .content .content-box image {
+  width: 202rpx;
+  margin-left: 15rpx;
+}
+.all .content .content-ashin {
+  position: absolute;
+  bottom: -10rpx;
+  right: 10rpx;
+}
+.all .content .content-ashin image {
+  width: 40rpx;
+}

@@ -1,0 +1,28 @@
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+image{
+    width: 100%;
+}
+
+/* 
+主题颜色 通过变量来实现
+1 less中存在变量这个知识
+2 原生的css和wxss也是支持变量
+*/
+
+page {
+    /* 定义主题颜色 */
+    --themeColor: #008fff;
+    /* 14px */
+    font-size: 28rpx;
+}
+@import "./styles/iconfont.wxss";

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/more/more",
+    "pages/add/add",
+    "pages/opinion/opinion",
+    "pages/about/about",
+    "pages/vote/vote",
+    "pages/blank/blank",
+    "pages/invest/invest",
+    "pages/quesModule/quesModule",
+    "pages/getBuildModule/getBuildModule"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "问卷调查",
+    "navigationBarTextStyle": "black"
+  },
+  "cloud": true,
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#008fff",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人空间",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-1.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "icons/chufang.png",
+        "text": "创建问卷",
+        "selectedIconPath": "icons/chufang-1.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "icons/more.png",
+        "selectedIconPath": "icons/more-1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

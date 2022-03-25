@@ -1,0 +1,26 @@
+page {
+  background-color: #f3f5f9;
+}
+.content-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-box .content {
+  position: relative;
+  margin: 10rpx;
+  width: 350rpx;
+  height: 350rpx;
+  background-color: #fff;
+  text-align: center;
+}
+.content-box .content image {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100rpx;
+  vertical-align: auto;
+  transform: translate(-50%, -40%);
+}
+.content-box .content text {
+  line-height: 480rpx;
+}

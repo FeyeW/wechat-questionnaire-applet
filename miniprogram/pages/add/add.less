@@ -1,0 +1,34 @@
+page {
+    background-color: #f3f5f9;
+}
+navigator{
+    -webkit-tap-highlight-color:rgba(0, 0, 0,0)
+}
+
+.content-box {
+    display  : flex;
+    flex-wrap: wrap;
+
+    .content {
+        position        : relative;
+        margin          : 10rpx;
+        width           : 350rpx;
+        height          : 350rpx;
+        background-color: #fff;
+        text-align      : center;
+
+        image {
+            position      : absolute;
+            top           : 40%;
+            left          : 50%;
+            width         : 100rpx;
+            vertical-align: auto;
+            transform     : translate(-50%, -40%);
+        }
+
+        text {
+            line-height: 480rpx;
+
+        }
+    }
+}
