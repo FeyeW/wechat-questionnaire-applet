@@ -5,17 +5,17 @@ Page({
         answers: [],
         openid: null
     },
-    qid:'',
+    qid: '',
     onLoad(options) {
-        let qid=parseInt(options.qid)
+        let qid = parseInt(options.qid)
         this.getQuestion(qid);
         this.getOpenId()
     },
 
     getOpenId() {
         wx.cloud.callFunction({
-                name: 'getOpenId',
-            })
+            name: 'getOpenId',
+        })
             .then(res => {
                 this.setData({
                     openid: res.result.openid
@@ -25,11 +25,11 @@ Page({
     },
     getQuestion(qid) {
         wx.cloud.callFunction({
-                name: 'getQuestion',
-                data: {
-                    qid: qid
-                }
-            })
+            name: 'getQuestion',
+            data: {
+                qid: qid
+            }
+        })
             .then(res => {
                 console.log(res.result.data.name)
                 if (res.result.errcode == 0) {
@@ -58,12 +58,12 @@ Page({
         }
 
         wx.cloud.callFunction({
-                name: 'getAnswer',
-                data: {
-                    uid: this.data.openid,
-                    objAnswer: objAnswer,
-                }
-            })
+            name: 'getAnswer',
+            data: {
+                uid: this.data.openid,
+                objAnswer: objAnswer,
+            }
+        })
             .then((res) => {
                 console.log(res)
                 if (res.result.errcode == 0) {
@@ -167,5 +167,33 @@ Page({
         this.setData({
             answers: tmpAnswers
         })
+    },
+    onShareAppMessage() {
+        const promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve({
+                    title: '快点填写问卷吧'
+                })
+            }, 2000)
+        })
+        return {
+            title: '快点填写问卷吧',
+            path: '/page/user?id=123',
+            promise
+        }
+    },
+    onShareTimeline() {
+        const promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve({
+                    title: '快点填写问卷吧'
+                })
+            }, 2000)
+        })
+        return {
+            title: '快点填写问卷吧',
+            path: '/page/user?id=123',
+            promise
+        }
     }
 });

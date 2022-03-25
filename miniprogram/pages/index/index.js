@@ -5,7 +5,6 @@ Page({
     nameList: '',
   },
   deleteId: '',
-  isDelete: false,
   onLoad() {
     this.getQuestion()
     this.getOpenId()
@@ -13,11 +12,6 @@ Page({
   },
   onShow() {
     this.getBlankQues()
-    console.log(this.isDelete)
-    if (this.isDelete) {
-      console.log(this.isDelete)
-      this.handleDelete()
-    }
   },
   getOpenId() {
     wx.cloud.callFunction({
@@ -100,35 +94,30 @@ Page({
   },
   //删除问卷事件
   async handleDelete(e) {
-    this.isDelete = true
-    console.log(e.currentTarget.dataset.id)
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
     let id = e.currentTarget.dataset.id + 10
-    /*     await wx.cloud.callFunction({
-          name: 'deleteBlankQues',
-          data: {
-            id: id
-          }
-        }).then(res => {
-          if (res.result.errcode == 0) {
-            wx.showToast({
-              title: '删除成功！',
-              icon: 'success'
-            })
-            setTimeout(() => {
-              console.log('我在返回！')
-              wx.switchTab({
-                url: '/pages/index/index',
-              })
-            }, 2000)
-            // time()
-          }
-          else {
-            wx.showToast({
-              title: '删除失败！',
-              icon: 'error'
-            })
-          }
-        }) */
+    await wx.cloud.callFunction({
+      name: 'deleteBlankQues',
+      data: {
+        id: id
+      }
+    }).then(res => {
+      if (res.result.errcode == 0) {
+        wx.showToast({
+          title: '删除成功！',
+          icon: 'success'
+        })
+        this.getBlankQues()
+      }
+      else {
+        wx.showToast({
+          title: '删除失败！',
+          icon: 'error'
+        })
+      }
+    })
   },
 
 })
