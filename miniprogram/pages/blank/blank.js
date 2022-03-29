@@ -132,6 +132,7 @@ Page({
       }
     }
   },
+  //增加空白问卷
   async submitQuestions() {
     console.log(this.getQuestions)
     await wx.cloud.callFunction({

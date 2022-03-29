@@ -7,8 +7,9 @@ Page({
   },
   qid: '',
   onLoad(options) {
+    console.log(options)
     let qid = parseInt(options.qid)
-    console.log(qid)
+    console.log(qid + 'qid')
     this.getQuestion(qid);
     this.getOpenId()
   },

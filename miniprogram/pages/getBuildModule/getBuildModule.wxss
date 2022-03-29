@@ -33,6 +33,9 @@ page {
     padding: 0 6rpx;
   }
   .container .btn-row {
-    margin: 80rpx 0;
+    position : absolute;
+    margin   : 40rpx 0;
+    left     : 50%;
+    transform: translateX(-50%);
   }
   

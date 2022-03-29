@@ -44,6 +44,13 @@
           "name": "个人中心",
           "pathName": "pages/index/index",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "按钮测试",
+          "pathName": "pages/quesModule/quesModule",
+          "query": "qid=6",
           "scene": null,
           "launchMode": "default"
         }

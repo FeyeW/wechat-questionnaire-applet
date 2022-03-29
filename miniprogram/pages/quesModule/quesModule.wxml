@@ -25,6 +25,6 @@
         </view>
     </block>
     <view class="btn-row">
-        <button bindtap="submitAnswer" type="primary">提交答案</button>
+        <button bindtap="submitAnswer" class="cu-btn round bg-blue" role="button">提交答案</button>
     </view>
 </view>

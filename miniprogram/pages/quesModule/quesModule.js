@@ -5,17 +5,23 @@ Page({
         answers: [],
         openid: null
     },
-    qid:'',
+    qid: '',
+    isSame: '',
     onLoad(options) {
-        let qid=parseInt(options.qid)
-        this.getQuestion(qid);
+        this.qid = parseInt(options.qid)
         this.getOpenId()
+        //this.getQuestion(this.qid);
+        //console.log()
+        //this.getAnserName()
     },
+    onShow() {
+        this.getAnserName()
 
+    },
     getOpenId() {
         wx.cloud.callFunction({
-                name: 'getOpenId',
-            })
+            name: 'getOpenId',
+        })
             .then(res => {
                 this.setData({
                     openid: res.result.openid
@@ -23,13 +29,14 @@ Page({
             })
             .catch()
     },
-    getQuestion(qid) {
-        wx.cloud.callFunction({
-                name: 'getQuestion',
-                data: {
-                    qid: qid
-                }
-            })
+    //根据id获取题目
+    async getQuestion(qid) {
+        await wx.cloud.callFunction({
+            name: 'getQuestion',
+            data: {
+                qid: qid
+            }
+        })
             .then(res => {
                 console.log(res.result.data.name)
                 if (res.result.errcode == 0) {
@@ -48,6 +55,34 @@ Page({
                 console.log(err)
             })
     },
+    //查询答案里的名字
+    async getAnserName() {
+        await this.getQuestion(this.qid);
+        let nameList = []
+        await wx.cloud.callFunction({
+            name: 'findAnswer'
+        }).then((res) => {
+            console.log(res.result.data)
+            let data = res.result.data
+            for (const element of data) {
+                for (const element1 of element.answers) {
+                    if (element1.name) {
+                        nameList.push(element1.name)
+                    }
+                }
+            }
+
+        }).catch((err) => {
+            console.log(err)
+        })
+        nameList.find((element) => {
+            if (element == this.data.name) {
+                this.isSame = true
+            }
+        })
+        console.log(this.isSame)
+    },
+    //提交按钮
     submitAnswer() {
         const answers = this.data.answers.sort((a, b) => {
             a.id - b.id
@@ -56,22 +91,56 @@ Page({
             //id: this.data.uid,
             answers: answers
         }
-
-        wx.cloud.callFunction({
-                name: 'getAnswer',
+        console.log(this.isSame)
+        if (this.isSame) {
+            wx.cloud.callFunction({
+                name: 'coverAnswer',
                 data: {
                     uid: this.data.openid,
                     objAnswer: objAnswer,
                 }
             })
-            .then((res) => {
+                .then((res) => {
+                    //console.log(res)
+                    if (res.result.errcode == 0) {
+                        wx.showToast({
+                            title: '保存成功',
+                            icon: 'success',
+                            mask: true,
+                        });
+                        time()
+                    } else {
+                        wx.showToast({
+                            title: '保存失败',
+                            icon: 'error',
+                            mask: true,
+                        });
+                    }
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        } else {
+            console.log('666')
+            wx.cloud.callFunction({
+                name: 'setAnswer',
+                data: {
+                    objAnswer: objAnswer,
+                }
+            }).then((res) => {
                 console.log(res)
                 if (res.result.errcode == 0) {
                     wx.showToast({
-                        title: '保存成功',
+                        title: '保存成功！',
                         icon: 'success',
                         mask: true,
                     });
+                    let time = setTimeout(() => {
+                        wx.switchTab({
+                            url: '/pages/index/index',
+                        })
+                    }, 2000)
+                    time()
                 } else {
                     wx.showToast({
                         title: '保存失败',
@@ -80,9 +149,11 @@ Page({
                     });
                 }
             })
-            .catch((err) => {
-                console.log(err)
-            })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }
+
     },
     onTextInput(e) {
         const qId = e.target.dataset.qid;
@@ -108,7 +179,7 @@ Page({
         const tmpOption = tmpQ.options1.find((item) => {
             return item.id == optionId
         })
-        console.log(e)
+        //console.log(e)
         const newAnswer = {
             "id": qId,
             "question_type": qType,
@@ -133,7 +204,7 @@ Page({
             let tmpOption = tmpQ.options2.find(item => {
                 return item.id == optionId
             })
-            console.log(tmpOption)
+            // console.log(tmpOption)
             if (tmpOption) {
                 tmpAnswerOptions.push({
                     "id": tmpOption.option_id,
@@ -165,7 +236,12 @@ Page({
             tmpAnswers = [...tmpAnswers, newAnswer]
         }
         this.setData({
-            answers: tmpAnswers
+            answers: [{
+                name: this.data.name
+            }, {
+                tmpAnswers
+            }
+            ]
         })
     }
 });

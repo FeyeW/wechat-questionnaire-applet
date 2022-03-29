@@ -28,4 +28,4 @@
         <input bindblur="getButtom" class="middle-input" placeholder="问题题目" />
     </view>
 </view>
-<button style="margin-top:40rpx" bindtap="submitQuestions" type="primary">创建问卷</button>
+<button  bindtap="submitQuestions" class="cu-btn round bg-blue btn-row" role="button">创建问卷</button>

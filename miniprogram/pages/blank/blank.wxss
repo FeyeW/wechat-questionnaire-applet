@@ -20,11 +20,19 @@ view .content-header .header-input {
   margin: 10rpx;
   width: 96%;
   height: 55rpx;
-  border: 1px solid #3bddfa;
+  border: 1px solid #d2f1f0;
+  border-radius: 10rpx;
 }
 view .content-header .middle-input {
   margin: 10rpx;
   width: 96%;
   height: 55rpx;
-  border: 1px solid #3bddfa;
+  border: 1px solid #d2f1f0;
+  border-radius: 10rpx;
+}
+.btn-row {
+  position: absolute;
+  margin: 40rpx 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
