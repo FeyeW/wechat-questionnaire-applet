@@ -243,5 +243,33 @@ Page({
             }
             ]
         })
+    },
+    onShareAppMessage() {
+        const promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve({
+                    title: '快点填写问卷吧'
+                })
+            }, 2000)
+        })
+        return {
+            title: '快点填写问卷吧',
+            path: '/page/user?id=123',
+            promise
+        }
+    },
+    onShareTimeline() {
+        const promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve({
+                    title: '快点填写问卷吧'
+                })
+            }, 2000)
+        })
+        return {
+            title: '快点填写问卷吧',
+            path: '/page/user?id=123',
+            promise
+        }
     }
 });
