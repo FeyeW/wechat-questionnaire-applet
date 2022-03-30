@@ -51,6 +51,13 @@
           "name": "按钮测试",
           "pathName": "pages/quesModule/quesModule",
           "query": "qid=6",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "问卷调查",
+          "pathName": "pages/quesModule/quesModule",
+          "query": "qid=1",
           "scene": null,
           "launchMode": "default"
         }

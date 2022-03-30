@@ -25,8 +25,8 @@ Page({
       })
       .catch()
   },
-  getQuestion(qid) {
-    wx.cloud.callFunction({
+  async getQuestion(qid) {
+    await wx.cloud.callFunction({
       name: 'getBlankQues',
       data: {
         id: qid
@@ -157,6 +157,14 @@ Page({
     }
     this._addAnswer(newAnswer)
   },
+  //导航栏返回上一级
+  handleBack() {
+
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+
+  },
   _addAnswer(newAnswer) {
     let tmpAnswers = this.data.answers;
     const foundIndex = tmpAnswers.findIndex((item) => {
@@ -170,5 +178,37 @@ Page({
     this.setData({
       answers: tmpAnswers
     })
-  }
+  },
+  //分享给好友
+  onShareAppMessage() {
+    console.log(this.right)
+    if (this.right != 'getUserProfile:ok') return
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: '快来填写问卷吧！'
+        })
+      }, 2000)
+    })
+    return {
+      title: '快来填写问卷吧！',
+      path: '/page/user?id=123',
+      promise
+    }
+  },
+  //分享朋友圈
+  onShareTimeline() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: '快来填写问卷吧！'
+        })
+      }, 2000)
+    })
+    return {
+      title: '快来填写问卷吧！',
+      path: '/page/user?id=123',
+      promise
+    }
+  },
 });

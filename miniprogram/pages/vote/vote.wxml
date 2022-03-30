@@ -1,14 +1,21 @@
-<view>
+<cu-custom isBack="{{true}}">
+    <view class="cu-bar bg-gradual-blue" style="height:180rpx;padding-top:0rpx !important;">
+        <view bindtap="handleBack" class="action" style="margin-top:110rpx">
+            <text class="cuIcon-back"></text>
+            <text style="font-size:28rpx">返回</text>
+        </view>
+        <text class="title">投票问卷</text>
+    </view>
+</cu-custom>
+<view class="content-vote">
     <h3>投票</h3>
-    <view>
-        <view hover-class="none" bindtap="handleUrl" data-qid="{{index}}" class="invest-content" wx:for="{{nameList}}" wx:key="index">
-            <view class="left">
-                <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bv73VA.png" />
-                <text>{{item}}</text>
-            </view>
-            <view class="right">
-                <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bvqAEj.png" />
-            </view>
+    <view hover-class="none" bindtap="handleUrl" data-qid="{{index}}" class="invest-content" wx:for="{{nameList}}" wx:key="index">
+        <view class="left">
+            <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bv73VA.png" />
+            <text>{{item}}</text>
+        </view>
+        <view class="right">
+            <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bvqAEj.png" />
         </view>
     </view>
 </view>

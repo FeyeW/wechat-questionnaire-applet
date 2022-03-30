@@ -1,7 +1,12 @@
+<cu-custom isBack="{{true}}">
+    <view class="cu-bar bg-gradual-blue" style="height:180rpx;padding-top:0rpx !important;">
+        <text class="title">查看更多</text>
+    </view>
+</cu-custom>
 <view class="content">
     <view class="content-header">
         <block wx:if="{{!hasUserInfo}}">
-            <image mode="widthFix" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" src="https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132"> </image>
+            <image mode="widthFix" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" src="https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132"></image>
             <text bindtap="getUserProfile">点击登录</text>
         </block>
         <block wx:else>
@@ -11,13 +16,13 @@
     </view>
     <view class="content-buttom" wx:for="{{moreFunction}}" wx:key="id">
         <navigator hover-class="none" url="{{item.url}}">
-        <view class="button-left">
-            <image mode="widthFix" src="{{item.src}}" />
-            <text>{{item.name}}</text>
-        </view>
-        <view class="button-right">
+            <view class="button-left">
+                <image mode="widthFix" src="{{item.src}}" />
+                <text>{{item.name}}</text>
+            </view>
+            <view class="button-right">
                 <image mode="widthFix" src="https://s1.ax1x.com/2022/03/15/bvqAEj.png" />
-        </view>
-    </navigator>
+            </view>
+        </navigator>
     </view>
 </view>

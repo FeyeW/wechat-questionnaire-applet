@@ -1,32 +1,32 @@
 page {
   background-color: #f3f5f9;
 }
-view {
+.content-invest {
   margin-top: 10rpx;
 }
-view h3 {
+.content-invest h3 {
   color: #a9a9a9;
   font-size: 24rpx;
   margin-left: 40rpx;
 }
-view .invest-content {
+.content-invest .invest-content {
   height: 80rpx;
   background-color: #fff;
   margin: 15rpx 40rpx;
 }
-view .invest-content .left {
+.content-invest .invest-content .left {
   display: flex;
   align-items: center;
 }
-view .invest-content .left image {
+.content-invest .invest-content .left image {
   width: 50rpx;
 }
-view .invest-content text {
+.content-invest .invest-content text {
   line-height: 80rpx;
   margin-left: 20rpx;
   font-size: 28rpx;
 }
-view .invest-content .right {
+.content-invest .invest-content .right {
   margin-left: 620rpx;
   margin-top: -60rpx;
   width: 40rpx;

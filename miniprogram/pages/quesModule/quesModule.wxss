@@ -4,11 +4,14 @@ page {
 }
 .container {
   margin: 20rpx;
+  background-color: #fff;
+  padding-bottom: 200rpx;
 }
 .container .page-name {
   font-size: 36rpx;
   line-height: 2;
   text-align: center;
+  font-weight: 800;
 }
 .container .question-wrap {
   margin: 20rpx 0;
@@ -16,9 +19,11 @@ page {
 .container .question-wrap .question-title {
   font-size: 28rpx;
   margin: 20rpx 0 10rpx;
+  margin-left: 10rpx;
 }
 .container .question-wrap .question-con {
-  margin-left: 20rpx;
+  margin-left: 30rpx;
+  width: 90%;
 }
 .container .question-wrap .question-con .label-row {
   display: block;
@@ -28,7 +33,7 @@ page {
   box-sizing: border-box;
   height: 2em;
   line-height: 2em;
-  border: 1px solid #d1d1d1;
+  border: 1px solid #e8f4d9;
   border-radius: 6rpx;
   padding: 0 6rpx;
 }

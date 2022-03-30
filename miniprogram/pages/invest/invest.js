@@ -21,9 +21,14 @@ Page({
       })
       .catch()
   },
+  //根据id获取问卷
   async getQuestion() {
     let qid = this.data.qid
     let List = []
+    wx.showLoading({
+      title: "加载中",
+      mask: true,
+    });
     for (const iterator of qid) {
       await wx.cloud.callFunction({
         name: 'getQuestion',
@@ -32,7 +37,6 @@ Page({
         }
       })
         .then(res => {
-          console.log(res)
           if (res.result.errcode == 0) {
             List.push(res.result.data.name)
             this.setData({
@@ -49,12 +53,20 @@ Page({
           console.log(err)
         })
     }
-
+    wx.hideLoading()
   },
   handleUrl(e) {
     let qid = e.currentTarget.dataset.qid + 1
     wx.navigateTo({
       url: '/pages/quesModule/quesModule?qid=' + qid,
     })
-  }
+  },
+  //导航栏返回上一级
+  handleBack() {
+
+    wx.switchTab({
+      url: '/pages/add/add'
+    })
+
+  },
 })

@@ -1,1 +1,10 @@
+<cu-custom isBack="{{true}}">
+    <view class="cu-bar bg-gradual-orange" style="height:180rpx;padding-top:0rpx !important;">
+        <view bindtap="handleBack" class="action" style="margin-top:110rpx">
+            <text class="cuIcon-back"></text>
+            <text style="font-size:28rpx">返回</text>
+        </view>
+        <text class="title">关于我</text>
+    </view>
+</cu-custom>
 <view class="content"></view>

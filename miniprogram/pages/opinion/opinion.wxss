@@ -1,3 +1,6 @@
 button{
-  margin-top:20rpx;
+  margin: 50rpx;
+  left: 25%;
+/*   left: 50%;
+  transform: translateX(-50%); */
 }

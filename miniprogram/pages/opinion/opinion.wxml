@@ -1,1 +1,12 @@
-<button open-type='feedback' type='primary'>意见反馈</button>
+<cu-custom isBack="{{true}}">
+    <view class="cu-bar bg-gradual-orange" style="height:180rpx;padding-top:0rpx !important;">
+        <view bindtap="handleBack" class="action" style="margin-top:110rpx">
+            <text class="cuIcon-back"></text>
+            <text style="font-size:28rpx">返回</text>
+        </view>
+        <text class="title">意见反馈</text>
+    </view>
+</cu-custom>
+<button open-type='feedback' class="cu-btn round bg-orange button-hover" role="button" aria-disabled>
+    点击跳转反馈页面
+</button>

@@ -1,4 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "调研问卷"
+  "navigationStyle": "custom"
 }

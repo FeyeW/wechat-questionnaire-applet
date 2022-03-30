@@ -5,25 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-     moreFunction:[
-       {
-        id:1, 
-        name:'关于我',
-        src:'https://s1.ax1x.com/2022/03/15/bvxsIg.png',
-        url:'/pages/about/about'
-       },
-       {
-         id:2,
-         name:'意见反馈',
-         src:'https://s1.ax1x.com/2022/03/15/bvxEaF.png',
-         url:'/pages/opinion/opinion'
-       }
-     ],
-     userInfo: {},
-     hasUserInfo: false,
-     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-     canIUseGetUserProfile: false,
-     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    moreFunction: [
+      {
+        id: 1,
+        name: '关于我',
+        src: 'https://s1.ax1x.com/2022/03/15/bvxsIg.png',
+        url: '/pages/about/about'
+      },
+      {
+        id: 2,
+        name: '意见反馈',
+        src: 'https://s1.ax1x.com/2022/03/15/bvxEaF.png',
+        url: '/pages/opinion/opinion'
+      }
+    ],
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUseGetUserProfile: false,
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
   // 事件处理函数
   bindViewTap() {
@@ -43,13 +43,15 @@ Page({
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        console.log(res+'res')
+        console.log(res.errMsg)
+        let right = res.errMsg
+        wx.setStorageSync('right', right)
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
       },
-      fail:(err=>{
+      fail: (err => {
         console.log(err)
       })
     })

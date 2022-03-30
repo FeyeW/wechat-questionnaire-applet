@@ -1,8 +1,10 @@
 page {
   background-color: #f3f5f9;
 }
-view {
-  margin-top: 10rpx;
+.blank-content {
+  margin: 20rpx;
+  background-color: #fff;
+  padding-bottom: 200rpx;
 }
 view h3 {
   color: #a9a9a9;
@@ -20,14 +22,14 @@ view .content-header .header-input {
   margin: 10rpx;
   width: 96%;
   height: 55rpx;
-  border: 1px solid #d2f1f0;
+  border: 1px solid #e8f4d9;
   border-radius: 10rpx;
 }
 view .content-header .middle-input {
   margin: 10rpx;
   width: 96%;
   height: 55rpx;
-  border: 1px solid #d2f1f0;
+  border: 1px solid #e8f4d9;
   border-radius: 10rpx;
 }
 .btn-row {

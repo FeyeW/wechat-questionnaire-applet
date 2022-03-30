@@ -7,9 +7,11 @@ Page({
     },
     qid: '',
     isSame: '',
+    right: '',
     onLoad(options) {
         this.qid = parseInt(options.qid)
         this.getOpenId()
+        this.right = wx.getStorageSync('right')
         //this.getQuestion(this.qid);
         //console.log()
         //this.getAnserName()
@@ -244,32 +246,44 @@ Page({
             ]
         })
     },
+    //分享给好友
     onShareAppMessage() {
+        console.log(this.right)
+        if (this.right != 'getUserProfile:ok') return
         const promise = new Promise(resolve => {
             setTimeout(() => {
                 resolve({
-                    title: '快点填写问卷吧'
+                    title: '快来填写问卷吧！'
                 })
             }, 2000)
         })
         return {
-            title: '快点填写问卷吧',
+            title: '快来填写问卷吧！',
             path: '/page/user?id=123',
             promise
         }
     },
+    //分享朋友圈
     onShareTimeline() {
         const promise = new Promise(resolve => {
             setTimeout(() => {
                 resolve({
-                    title: '快点填写问卷吧'
+                    title: '快来填写问卷吧！'
                 })
             }, 2000)
         })
         return {
-            title: '快点填写问卷吧',
+            title: '快来填写问卷吧！',
             path: '/page/user?id=123',
             promise
         }
-    }
+    },
+    //导航栏返回上一级
+    handleBack() {
+
+        wx.redirectTo({
+            url: '/pages/invest/invest'
+        })
+
+    },
 });

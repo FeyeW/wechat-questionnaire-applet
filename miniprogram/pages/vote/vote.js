@@ -1,61 +1,71 @@
 // pages/invest/invest.js
 Page({
   data: {
-    qid:[6,7,8,9,10],
-    nameList:'',
+    qid: [6, 7, 8, 9, 10],
+    nameList: '',
   },
 
-onLoad()
-{
+  onLoad() {
 
-  this.getQuestion()
-  this.getOpenId() 
-},
-getOpenId() {
-  wx.cloud.callFunction({   
-          name: 'getOpenId',
-      })
+    this.getQuestion()
+    this.getOpenId()
+  },
+  getOpenId() {
+    wx.cloud.callFunction({
+      name: 'getOpenId',
+    })
       .then(res => {
-          this.setData({
-              openid: res.result.openid
-          })
+        this.setData({
+          openid: res.result.openid
+        })
       })
       .catch()
-},
-async getQuestion() {
- let qid=this.data.qid
- let List=[]
- for (const iterator of  qid) {
- await wx.cloud.callFunction({
-    name: 'getQuestion',
-    data: {
-        qid: iterator
-    }
-})
- .then(res => { 
-    if (res.result.errcode == 0) {
-      List.push(res.result.data.name)
-          this.setData({
-          nameList: List,
+  },
+  async getQuestion() {
+    let qid = this.data.qid
+    let List = []
+    wx.showLoading({
+      title: "加载中",
+      mask: true,
+    });
+    for (const iterator of qid) {
+      await wx.cloud.callFunction({
+        name: 'getQuestion',
+        data: {
+          qid: iterator
+        }
+      })
+        .then(res => {
+          if (res.result.errcode == 0) {
+            List.push(res.result.data.name)
+            this.setData({
+              nameList: List,
+            })
+          } else {
+            wx.showToast({
+              title: '查询题目失败',
+              icon: 'error'
+            })
+          }
         })
-    } else {
-        wx.showToast({
-            title: '查询题目失败',
-            icon: 'error'
+        .catch((err) => {
+          console.log(err)
         })
     }
-})
-.catch((err) => {
-    console.log(err)
-})
- }
+    wx.hideLoading()
+  },
+  handleUrl(e) {
+    let qid = e.currentTarget.dataset.qid + 6
+    wx.navigateTo({
+      url: '/pages/quesModule/quesModule?qid=' + qid,
+    })
+  },
+  //导航栏返回上一级
+  handleBack() {
 
-},
-handleUrl(e)
-{
-  let qid=e.currentTarget.dataset.qid+6
-  wx.navigateTo({
-    url: '/pages/quesModule/quesModule?qid='+qid,
-  })
-}
+    wx.switchTab({
+      url: '/pages/add/add'
+    })
+
+  },
 })

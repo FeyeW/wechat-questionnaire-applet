@@ -14,7 +14,14 @@ Page({
   onLoad: function (options) {
 
   },
+  //导航栏返回上一级
+  handleBack() {
 
+    wx.switchTab({
+      url: '/pages/more/more'
+    })
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

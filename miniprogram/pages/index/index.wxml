@@ -1,3 +1,8 @@
+<cu-custom isBack="{{true}}">
+    <view class="cu-bar bg-gradual-blue" style="height:180rpx;padding-top:0rpx !important;">
+        <text class="title">个人中心</text>
+    </view>
+</cu-custom>
 <view class="all">
     <view class="content" class="content" wx:for="{{nameList}}" wx:key="index">
         <view class="content-box" data-qid="{{index}}" bindtap="handleUrl">

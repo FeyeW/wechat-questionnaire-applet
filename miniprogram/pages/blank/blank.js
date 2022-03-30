@@ -188,6 +188,14 @@ Page({
       })
 
   },
+  //导航栏返回上一级
+  handleBack() {
+
+    wx.switchTab({
+      url: '/pages/add/add'
+    })
+
+  },
   onHide() {
     clearTimeout(time)
   }
