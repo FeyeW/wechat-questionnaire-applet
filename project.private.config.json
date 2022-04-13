@@ -58,6 +58,13 @@
           "name": "问卷调查",
           "pathName": "pages/quesModule/quesModule",
           "query": "qid=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/about/about",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

@@ -31,6 +31,6 @@ page {
     /* 14px */
     font-size: 28rpx;
 }
-@import "./styles/iconfont.wxss";
+@import "./styles/css/iconfont.wxss";
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";

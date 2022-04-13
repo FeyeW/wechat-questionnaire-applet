@@ -7,4 +7,9 @@
         <text class="title">关于我</text>
     </view>
 </cu-custom>
-<view class="content"></view>
+<view id="show-resume">
+    <view id="resume_content" class="resume_content clearfloat">
+        <view class="section-left"></view>
+        <view class="section-right"></view>
+    </view>
+</view>

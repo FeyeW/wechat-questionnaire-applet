@@ -10,11 +10,6 @@ exports.main = async (event, context) => {
   const answerResult = await db.collection('setQuestions').add({
       data:event.objQuestions
   })
-  //.doc(event.uid)
-/*   .doc(event.uid)
-  .set({
-      data: event.objQuestions,
-  }) */
   if (answerResult.errMsg == 'collection.add:ok') {
     return {
         errcode: 0,
