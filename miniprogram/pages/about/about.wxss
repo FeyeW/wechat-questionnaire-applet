@@ -1,0 +1,208 @@
+#show-resume {
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem 0.5rem;
+  overflow: auto;
+  box-sizing: border-box;
+}
+#show-resume #resume_content {
+  width: 100%;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  background: #f9f9f9;
+  font-size: 0.7rem;
+}
+#show-resume .section-left {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: #313131;
+  line-height: 1.8;
+}
+#show-resume .section-left .head {
+  background-color: #ececec;
+}
+#show-resume .section-left .head .head-up {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .head .head-up h2 {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+#show-resume .section-left .head .head-up h3 {
+  font-weight: 800;
+}
+#show-resume .section-left .head .head-up p {
+  font-size: 0.7rem;
+}
+#show-resume .section-left .head .head-up text {
+  font-size: 0.7rem;
+}
+#show-resume .section-left .head .head-down {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  border-top: 2px solid #c2c2c2;
+  border-bottom: 2px solid #c2c2c2;
+}
+#show-resume .section-left .head .head-down .li {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+#show-resume .section-left .head .head-down .li:nth-child(2) {
+  border-left: 2px solid #c2c2c2;
+}
+#show-resume .section-left .head .head-down .li:nth-child(3) {
+  border-left: 2px solid #c2c2c2;
+}
+#show-resume .section-left .edu {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .edu h2 {
+  width: 90rpx;
+  font-weight: 800;
+  border-bottom: 2px solid #c2c2c2;
+  margin: 10rpx 0 10rpx 130rpx;
+}
+#show-resume .section-left .interest {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .interest h2 {
+  width: 90rpx;
+  font-weight: 800;
+  border-bottom: 2px solid #c2c2c2;
+  margin: 10rpx 0 10rpx 130rpx;
+}
+#show-resume .section-left .interest .inter {
+  margin-left: 30rpx;
+}
+#show-resume .section-left .interest .inter-dos {
+  float: left;
+  border: 1px solid rgba(151, 151, 151, 0.5);
+  border-radius: 1rem;
+  width: 80rpx;
+  height: 20rpx;
+  margin: 10rpx 25rpx;
+  padding: 8rpx;
+  font-size: 0.7rem;
+  line-height: 20rpx;
+}
+#show-resume .section-left .interest .inter-dos:nth-child(5) {
+  margin-left: 90rpx;
+}
+#show-resume .section-left .skill {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .skill h2 {
+  width: 90rpx;
+  font-weight: 800;
+  border-bottom: 2px solid #c2c2c2;
+  margin: 10rpx 0 10rpx 130rpx;
+}
+#show-resume .section-left .skill .inter {
+  position: relative;
+  display: flex;
+  margin-left: 0.3rpx;
+}
+#show-resume .section-left .skill .inter .inter-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .skill .inter .inter-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+#show-resume .section-left .skill .inter .inter-right .sk-wrap {
+  margin: auto 0;
+  width: 70%;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(151, 151, 151, 0.5);
+}
+#show-resume .section-left .skill .inter .inter-right .sk-per {
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: rgba(151, 151, 151, 0.9);
+  border-radius: 0.4rem;
+}
+#show-resume .section-left .self-evaluation {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-left .self-evaluation h2 {
+  width: 90rpx;
+  font-weight: 800;
+  border-bottom: 2px solid #c2c2c2;
+  margin: 10rpx 0 10rpx 130rpx;
+}
+#show-resume .section-right {
+  float: right;
+  width: 50%;
+  line-height: 1.5;
+}
+#show-resume .section-right .blog-box {
+  margin: 10rpx 0 0 60rpx;
+}
+#show-resume .section-right .blog-box .blog-title {
+  font-weight: 800;
+}
+#show-resume .section-right .blog-box .link p {
+  font-size: 0.6rem;
+}
+#show-resume .section-right .blog-box .link a {
+  margin-left: 10rpx;
+  font-size: 0.5rem;
+}
+#show-resume .section-right .work-experience,
+#show-resume .section-right .project-experience {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+#show-resume .section-right .work-experience .experience-title,
+#show-resume .section-right .project-experience .experience-title {
+  display: flex;
+  background: linear-gradient(to right, #ffffff, rgba(135, 135, 135, 0.5) 50%, #ffffff);
+}
+#show-resume .section-right .work-experience .experience-title .title-name,
+#show-resume .section-right .project-experience .experience-title .title-name {
+  flex: 1.5;
+}
+#show-resume .section-right .work-experience .experience-title .title-date,
+#show-resume .section-right .project-experience .experience-title .title-date {
+  flex: 1;
+}
+#show-resume .section-right .work-experience .show .item,
+#show-resume .section-right .project-experience .show .item {
+  display: flex;
+  flex-direction: column;
+}
+#show-resume .section-right .work-experience .show .item .item-ul .dos,
+#show-resume .section-right .project-experience .show .item .item-ul .dos {
+  width: 10rpx;
+  height: 10rpx;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+#show-resume .section-right .skill-experience {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+#show-resume .section-right .skill-experience .experience-title {
+  display: flex;
+  background: linear-gradient(to right, #ffffff, rgba(135, 135, 135, 0.5) 50%, #ffffff);
+}
+#show-resume .section-right .skill-experience .experience-title .title-name {
+  flex: 1.5;
+}
+#show-resume .section-right .skill-experience .experience-title .title-date {
+  flex: 1;
+}

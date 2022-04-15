@@ -1,0 +1,269 @@
+#show-resume {
+    width     : 100%;
+    background: #ffffff;
+    padding   : 1rem .5rem;
+    overflow  : auto;
+    box-sizing: border-box;
+
+    #resume_content {
+        width     : 100%;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+        overflow  : auto;
+        background: rgb(249, 249, 249);
+        font-size : .7rem;
+    }
+
+    .section-left {
+        float      : left;
+        width      : 50%;
+        text-align : center;
+        color      : #313131;
+        line-height: 1.8;
+
+        .head {
+            background-color: #ececec;
+
+            .head-up {
+                display       : flex;
+                flex-direction: column;
+
+                h2 {
+                    font-weight: 800;
+                    font-size  : .9rem;
+                }
+
+                h3 {
+                    font-weight: 800;
+                }
+
+                p {
+                    font-size: .7rem;
+                }
+
+                text {
+                    font-size: .7rem;
+                }
+            }
+
+            .head-down {
+                display        : flex;
+                justify-content: space-around;
+                box-sizing     : border-box;
+                border-top     : 2px solid #c2c2c2;
+                border-bottom  : 2px solid #c2c2c2;
+
+                .li {
+                    width         : 34%;
+                    display       : flex;
+                    flex-direction: column;
+                    justify-items : center;
+                }
+
+                .li:nth-child(2) {
+                    border-left: 2px solid #c2c2c2;
+                }
+
+                .li:nth-child(3) {
+                    border-left: 2px solid #c2c2c2;
+                }
+
+                text {}
+            }
+        }
+
+        .edu {
+            display       : flex;
+            flex-direction: column;
+
+            h2 {
+                width        : 90rpx;
+                font-weight  : 800;
+                border-bottom: 2px solid #c2c2c2;
+                margin       : 10rpx 0 10rpx 130rpx;
+            }
+        }
+
+        .interest {
+            display       : flex;
+            flex-direction: column;
+
+            h2 {
+                width        : 90rpx;
+                font-weight  : 800;
+                border-bottom: 2px solid #c2c2c2;
+                margin       : 10rpx 0 10rpx 130rpx;
+            }
+
+            .inter {
+                margin-left: 30rpx;
+            }
+
+            .inter-dos {
+                float        : left;
+                border       : 1px solid rgba(151, 151, 151, 0.5);
+                border-radius: 1rem;
+                width        : 80rpx;
+                height       : 20rpx;
+                margin       : 10rpx 25rpx;
+                padding      : 8rpx;
+                font-size    : .7rem;
+                line-height  : 20rpx;
+            }
+
+            .inter-dos:nth-child(5) {
+                margin-left: 90rpx;
+            }
+        }
+
+        .skill {
+            display       : flex;
+            flex-direction: column;
+
+            h2 {
+                width        : 90rpx;
+                font-weight  : 800;
+                border-bottom: 2px solid #c2c2c2;
+                margin       : 10rpx 0 10rpx 130rpx;
+            }
+
+            .inter {
+                position   : relative;
+                display    : flex;
+                margin-left: .3rpx;
+
+                .inter-left {
+                    width         : 30%;
+                    display       : flex;
+                    flex-direction: column;
+                }
+
+                .inter-right {
+                    display       : flex;
+                    flex-direction: column;
+                    width         : 70%;
+
+                    .sk-wrap {
+                        margin       : auto 0;
+                        width        : 70%;
+                        height       : .5rem;
+                        border-radius: 0.5rem;
+                        background   : rgba(151, 151, 151, 0.5);
+                    }
+
+                    .sk-per {
+                        display      : block;
+                        width        : 40%;
+                        height       : 100%;
+                        background   : rgba(151, 151, 151, 0.9);
+                        border-radius: 0.4rem;
+                    }
+                }
+            }
+
+
+        }
+
+        .self-evaluation {
+            display       : flex;
+            flex-direction: column;
+
+            h2 {
+                width        : 90rpx;
+                font-weight  : 800;
+                border-bottom: 2px solid #c2c2c2;
+                margin       : 10rpx 0 10rpx 130rpx;
+            }
+        }
+    }
+
+    .section-right {
+        float      : right;
+        width      : 50%;
+        line-height: 1.5;
+
+        .blog-box {
+            margin: 10rpx 0 0 60rpx;
+
+            .blog-title {
+                font-weight: 800;
+            }
+
+            .link {
+
+
+                p {
+                    font-size: .6rem;
+                }
+
+                a {
+                    margin-left: 10rpx;
+                    font-size  : .5rem;
+                }
+            }
+        }
+
+        .experience {}
+
+        .work-experience,
+        .project-experience {
+            margin-top : 10rpx;
+            margin-left: 10rpx;
+
+            .experience-title {
+                display   : flex;
+                background: linear-gradient(to right, #ffffff, rgba(135, 135, 135, 0.5) 50%, #ffffff);
+
+                .title-name {
+                    flex: 1.5;
+                }
+
+                .title-date {
+                    flex: 1;
+                }
+            }
+
+            .show {
+                .item {
+                    display       : flex;
+                    flex-direction: column;
+
+                    .item-name {}
+
+                    .item-skill {}
+
+                    .item-date {}
+
+                    .item-ul {
+                        .dos {
+                            width        : 10rpx;
+                            height       : 10rpx;
+                            border       : 1px solid #000;
+                            border-radius: 50%;
+                        }
+
+                        .item-li {}
+                    }
+
+                }
+            }
+        }
+
+        .skill-experience {
+            margin-top : 10rpx;
+            margin-left: 10rpx;
+
+            .experience-title {
+                display   : flex;
+                background: linear-gradient(to right, #ffffff, rgba(135, 135, 135, 0.5) 50%, #ffffff);
+
+                .title-name {
+                    flex: 1.5;
+                }
+
+                .title-date {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 export default {
     "head": {
-        "name": "曾田生",
+        "name": "测试名",
         "intention": "前端开发",
         "tel": "15712345678",
         "email": "zengtianshengz@163.com",
@@ -12,9 +12,15 @@ export default {
         "graduationTime": "2012-9-1 至 2016-7-1",
         "major": "电子信息工程及自动化",
         "honor": "2014年省电子科技大赛3等奖",
-        "interest": "骑行、游泳、编程、音乐、攀岩",
-        "speciality": "js、css、html",
-        "specialityPer": "40、50、60"
+        "interest": [
+            "骑行", "游泳", "编程", "音乐", "攀岩"
+        ],
+        "all": {
+            "speciality":
+                [
+                    "js", "css", "html",],
+            "specialityPer": ["40%", "50%", "60%"]
+        }
 
     },
     "blogLink": {
@@ -96,8 +102,7 @@ export default {
         }
     ],
     "selfAssessment": [
-        "   鲁迅先生曾说过:世上本没有路,走的人多了便成了路",
-        "每错,点击左上角,欢迎 star "
+        "头脑清醒，持续努力",
     ]
 
 }

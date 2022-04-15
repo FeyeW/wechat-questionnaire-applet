@@ -9,7 +9,126 @@
 </cu-custom>
 <view id="show-resume">
     <view id="resume_content" class="resume_content clearfloat">
-        <view class="section-left"></view>
-        <view class="section-right"></view>
+        <!-- <view class="section-left">
+            <view class="head">
+                <view class="head-up">
+                    <h2>{{resumeData.head.name}}</h2>
+                    <h3>求职意向:{{resumeData.head.intention}}</h3>
+                    <p class="cuIcon-mobile lg text-gray"></p>
+                    <text>{{resumeData.head.tel}}</text>
+                    <p class="cuIcon-mail lg text-gray"></p>
+                    <text>{{resumeData.head.email}}</text>
+                </view>
+                <view class="head-down">
+                    <view class="li">
+                        <text space="nbsp">住址</text>
+                        <text space="nbsp">{{resumeData.head.address}}</text>
+                    </view>
+                    <view class="li">
+                        <text space="nbsp">年龄</text>
+                        <text space="nbsp">{{resumeData.head.age}}</text>
+                    </view>
+                    <view class="li">
+                        <text space="nbsp">性别</text>
+                        <text space="nbsp">{{resumeData.head.sex}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="edu">
+                <h2>教育背景</h2>
+                <text>{{resumeData.head.school}} ({{resumeData.head.graduation}})</text>
+                <text>{{resumeData.head.graduationTime}}</text>
+                <text>专业:{{resumeData.head.major}}</text>
+            </view>
+            <view class="interest">
+                <h2>兴趣爱好</h2>
+                <view class="inter">
+                    <text wx:for="{{ resumeData.head.interest}}" wx:key="index">{{item}}</text>
+                </view>
+            </view>
+            <view class="skill">
+                <h2>技能特长</h2>
+                <view class="inter">
+                    <view class="inter-left">
+                        <p wx:for="{{ resumeData.head.all.speciality}}" wx:key="index">{{item}}</p>
+                    </view>
+                    <view class="inter-right">
+                        <view class="sk-wrap" wx:for="{{ resumeData.head.all.specialityPer}}" wx:key="index">
+                            <span class="sk-per" style="width:{{item}}"></span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="self-evaluation">
+                <h2>自我评价</h2>
+                <view wx:for="{{resumeData.selfAssessment}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+        <view class="section-right">
+            <view class="blog-box clearfloat">
+                <view class="blog-title">BLOG LINK</view>
+                <view class="link">
+                    <p class="cuIcon-peoplefill lg text-gray"></p>
+                    <a target="_blank" href="">https://github.com/ZengTianShengZ</a>
+                </view>
+                <view class="link">
+                    <p class="cuIcon-activity lg text-gray"></p>
+                    <a target="_blank" href="">https://github.com/ZengTianShengZ</a>
+                </view>
+            </view>
+            <view class="experience work-experience">
+                <view class="experience-title">
+                    <view class="title-name">工作经验</view>
+                    <view class="title-date">{{resumeData.workExperience.time}}</view>
+                </view>
+                <view class="show" wx:for="{{resumeData.workExperience.experience}}" wx:key="index">
+                    <view class="item" wx:if="item.name">
+                        <view class="item-name text-orange">{{item.name}}</view>
+                        <view class="item-skill text-orange">({{item.skill}})</view>
+                        <view class="item-date">{{item.time}}</view>
+                        <view class="item-ul">
+                            <view class="item-li cuIcon-footprint lg text-gray" wx:for="{{item.describe}}" wx:key="index">
+                                {{item}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="experience project-experience">
+                <view class="experience-title">
+                    <view class="title-name">项目经验</view>
+                    <view class="title-date">{{resumeData.workExperience.time}}</view>
+                </view>
+                <view class="show" wx:for="{{resumeData.projectExperience.experience}}" wx:key="index">
+                    <view class="item" wx:if="item.name">
+                        <view class="item-name text-orange">{{item.name}}</view>
+                        <view class="item-skill text-orange">({{item.skill}})</view>
+                        <view class="item-ul">
+                            <view class="item-li cuIcon-footprint lg text-gray" wx:for="{{item.describe}}" wx:key="index">
+                                {{item}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="experience skill-experience">
+                <view class="experience-title">
+                    <view class="title-name">掌握技能</view>
+                    <view class="title-date">{{resumeData.workExperience.time}}</view>
+                </view>
+                <view class="show" wx:for="{{resumeData.skill}}" wx:key="index">
+                    <view class="item" wx:if="item.type">
+                        <view class="item-name text-orange">{{item.type}}</view>
+                        <view class="item-ul">
+                            <view class="item-li cuIcon-appreciate lg text-gray" wx:for="{{item.describe}}" wx:key="index">
+                                {{item}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        
+        </view> -->
+        <rich-text nodes="{{code}}"></rich-text>
     </view>
 </view>
