@@ -55,7 +55,7 @@ Page({
 
   },
   handleUrl(e) {
-    let qid = e.currentTarget.dataset.qid + 10
+    let qid = e.currentTarget.dataset.qid + 1
     wx.navigateTo({
       url: '/pages/getBuildModule/getBuildModule?qid=' + qid,
     })
@@ -97,7 +97,7 @@ Page({
     wx.switchTab({
       url: '/pages/index/index',
     })
-    let id = e.currentTarget.dataset.id + 10
+    let id = e.currentTarget.dataset.id + 1
     await wx.cloud.callFunction({
       name: 'deleteBlankQues',
       data: {

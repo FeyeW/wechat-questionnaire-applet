@@ -3,17 +3,17 @@ export const str = {
     <div class="section-left">
         <div class="head">
             <div class="head-up">
-                <h2>测试名</h2>
-                <h3>求职意向:前端开发</h3>
+                <h2>韦銥菲</h2>
+                <h3>求职意向:Web前端工程师</h3>
                 <p class="cuIcon-mobile lg text-gray"></p>
-                <p>15712345678</p>
+                <p>13430851417</p>
                 <p class="cuIcon-mail lg text-gray"></p>
-                <p>zengtianshengz@163.com</p>
+                <p>feyew@foxmail.com</p>
             </div>
             <div class="head-down">
                 <div class="li">
                     <p space="nbsp">住址</p>
-                    <p space="nbsp">杭州余杭</p>
+                    <p space="nbsp">苏州市</p>
                 </div>
                 <div class="li">
                     <p space="nbsp">年龄</p>
@@ -27,18 +27,22 @@ export const str = {
         </div>
         <div class="edu">
             <h2>教育背景</h2>
-            <p>华侨大学厦门工学院 (本科)</p>
-            <p>2012-9-1 至 2016-7-1</p>
-            <p>专业:电子信息工程及自动化</p>
+            <p>广西科技大学 (本科)</p>
+            <p>2018-9至2022-6</p>
+            <p>专业:软件工程</p>
         </div>
+        <div class="edu">
+        <h2>荣获</h2>
+        <p>CET-4 ，具备听读写的能力</p>
+    </div>
         <div class="interest">
             <h2>兴趣爱好</h2>
             <div class="inter">
-                <div class="inter-dos">骑行</div>
-                <div class="inter-dos">游泳</div>
+                <div class="inter-dos">摄影</div>
+                <div class="inter-dos">绘画</div>
                 <div class="inter-dos">编程</div>
                 <div class="inter-dos">音乐</div>
-                <div class="inter-dos">攀岩</div>
+                <div class="inter-dos">跑步</div>
             </div>
         </div>
         <div class="skill">
@@ -72,46 +76,31 @@ export const str = {
             <div class="blog-title">BLOG LINK</div>
             <div class="link">
                 <p class="cuIcon-peoplefill lg text-gray"></p>
-                <a target="_blank" href="">https://github.com/ZengTianShengZ</a>
+                <a target="_blank" href=""> https://gitee.com/weiyifei</a>
             </div>
             <div class="link">
                 <p class="cuIcon-activity lg text-gray"></p>
-                <a target="_blank" href="">https://github.com/ZengTianShengZ</a>
+                <a target="_blank" href="">https://juejin.cn/user/3035109636451934</a>
             </div>
         </div>
         <div class="experience work-experience">
             <div class="experience-title">
-                <div class="title-name">工作经验</div>
-                <div class="title-date">2016-10 至 今</div>
+                <div class="title-name">实习经历</div>
+                <div class="title-date">2022-12 至 今</div>
             </div>
             <div class="show">
                 <div class="item">
-                    <div class="item-name text-orange">网页游戏bong精灵</div>
-                    <div class="item-skill text-orange">(gulp+scss+zepto)</div>
+                    <div class="item-name text-orange">苏州研途教育科技有限公司</div>
+                    <div class="item-skill text-orange">(JavaScript+less+Vue.js)</div>
                     <div class="item-ul">
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            bong精灵可以根据用户消耗的卡路里换取食物进行喂养,有食物商店,宠物商店,宠物PK,精灵分享等
+                        基于PC端、手机端及小程序的推广H5页面的开发、维护
                         </div>
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            使用gulp构建项目,实现浏览器热刷新,js、css压缩合并,图片压缩处理等项目自动打包处理
+                        HTML5+CSS3进行页面设计图还原，cdn包导入vue.js页面开发/vue-cli搭建H5项目
                         </div>
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            使用flexible.js实现移动端屏幕适配问题
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item-name text-orange">微信公众号活动页</div>
-                    <div class="item-skill text-orange">(vue.js+vue-route+nodeJs)</div>
-                    <div class="item-ul">
-                        <div class="item-li cuIcon-footprint lg text-gray">
-                            基于微信公众号的网页活动,实现用户活动分享,用户活动查看好友记录等
-                        </div>
-                        <div class="item-li cuIcon-footprint lg text-gray">
-                            使用vue框架完成项目前端开发,使用nodeJs完成项目后端开发
-                        </div>
-                        <div class="item-li cuIcon-footprint lg text-gray">
-                            项目服务器部署,项目后期维护和运维
+                        利用AJAX/Axios与用户接口进行配置，并于后端进行对接
                         </div>
                     </div>
                 </div>
@@ -120,31 +109,37 @@ export const str = {
         <div class="experience project-experience">
             <div class="experience-title">
                 <div class="title-name">项目经验</div>
-                <div class="title-date">2016-10 至 今</div>
+                <div class="title-date"></div>
             </div>
             <div class="show">
                 <div class="item">
-                    <div class="item-name text-orange">轻量级Dom操作库-zBase.js</div>
-                    <div class="item-skill text-orange">(轻量级,无依赖)</div>
+                    <div class="item-name text-orange">电商管理后台系统</div>
+                    <div class="item-skill text-orange">(Vue.js+element-ui+echarts)</div>
                     <div class="item-ul">
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            轻量级Dom操作库,可类似于jquery操作dom
+                        基于vue.js，采用前后端分离开发模式，使用vue-cli快速搭建开发环境
                         </div>
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            无依赖,支持AMD,CMD加载
+                        vue-router构建单页面应用，apache echart绘制图表
                         </div>
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            项目链接: https://github.com/ZengTianShengZ/zBase
+                        使用axios的进行前后端数据交互，利用 elementUI 的完成页面布局
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="item-name text-orange">React项目构建三部曲</div>
-                    <div class="item-skill text-orange">(react+react-Redux+react-router+ES6)</div>
+                    <div class="item-name text-orange">问卷调查、电商小程序</div>
+                    <div class="item-skill text-orange">(NIMA原生框架+JavaScript+云开发功能+es6、es7)</div>
                     <div class="item-ul">
                         <div class="item-li cuIcon-footprint lg text-gray">
-                            构建适合React项目开发的脚手架
+                        设计总体架构以及各页面结构，设计问卷调查小程序切换功能模块
                         </div>
+                        <div class="item-li cuIcon-footprint lg text-gray">
+                        应用云函数、云存储和云数据功能对问卷的数据进行采集和管理，实现调查问卷平台各功能模块
+                    </div>
+                    <div class="item-li cuIcon-footprint lg text-gray">
+                    使用tabbar实现底部导航栏，async和await解决异步回调，⼩程序内置 request API进行接口数据获取等
+                </div>
                     </div>
                 </div>
             </div>
@@ -152,14 +147,14 @@ export const str = {
         <div class="experience skill-experience">
             <div class="experience-title">
                 <div class="title-name">掌握技能</div>
-                <div class="title-date">2016-10 至 今</div>
+                <div class="title-date"></div>
             </div>
             <div class="show">
                 <div class="item">
                     <div class="item-name text-orange">构建工具</div>
                     <div class="item-ul">
                         <div class="item-li cuIcon-appreciate lg text-gray">
-                            熟练使用gulp,webpack构建项目
+                        熟练使用npm,webpack构建项目                       
                         </div>
                     </div>
                 </div>
@@ -167,10 +162,10 @@ export const str = {
                     <div class="item-name text-orange">框架</div>
                     <div class="item-ul">
                         <div class="item-li cuIcon-appreciate lg text-gray">
-                            熟悉 jQuery,Bootstrap
+                        了解 jQuery
                         </div>
                         <div class="item-li cuIcon-appreciate lg text-gray">
-                            熟练使用vue完成复杂交互的开发
+                        熟练使用vue完成复杂交互的开发
                         </div>
                         <div class="item-li cuIcon-appreciate lg text-gray">
                             了解react
@@ -184,16 +179,10 @@ export const str = {
                             熟悉 js,能使用原生js完成一般项目的开发
                         </div>
                         <div class="item-li cuIcon-appreciate lg text-gray">
-                            熟悉css,scss,以及css3的以下新特性
+                            熟悉css,less,以及css3的以下新特性
                         </div>
                         <div class="item-li cuIcon-appreciate lg text-gray">
                             熟悉 html5,能写出语义化网页
-                        </div>
-                        <div class="item-li cuIcon-appreciate lg text-gray">
-                            熟悉网页优化
-                        </div>
-                        <div class="item-li cuIcon-appreciate lg text-gray">
-                            了解网络安全,懂得项目运维
                         </div>
                     </div>
                 </div>

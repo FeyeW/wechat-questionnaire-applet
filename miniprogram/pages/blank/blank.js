@@ -180,8 +180,13 @@ Page({
           element.id
           this.blankQuesIdList.push(element.id)
         });
-        let blanckMaxId = this.blankQuesIdList[this.blankQuesIdList.length - 1]
-        this.getQuestions.id = blanckMaxId + 1
+        if (this.blankQuesIdList.length !== 0) {
+          let blanckMaxId = this.blankQuesIdList[this.blankQuesIdList.length - 1]
+          this.getQuestions.id = blanckMaxId + 1
+        } else {
+          this.getQuestions.id = 1
+        }
+
       })
       .catch((err) => {
         console.log(err)
